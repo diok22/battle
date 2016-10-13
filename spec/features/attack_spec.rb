@@ -14,6 +14,6 @@ RSpec.feature Battle, :type => :feature do
     click_button "Attack Player 2"
     click_link "Return to Play!"
 
-    expect(page).to have_text("Player1 vs Player2")
+    expect(page).to have_text("Player2 vs Player1")
   end
 end
