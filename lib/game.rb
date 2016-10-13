@@ -1,6 +1,7 @@
 require_relative 'player'
 
 class Game
+
   attr_reader :players
 
   DEFAULT_DAMAGE = 10
@@ -10,7 +11,11 @@ class Game
   end
 
   def attack(player)
-    player.reduce_hp
+    if player == @players[1]
+      @players[1].reduce_hp
+    elsif player == @players[2]
+      @players[1].reduce_hp
+    end
   end
 
 end
