@@ -10,12 +10,20 @@ class Game
     @players = [player_1, player_2]
   end
 
-  def attack(player)
-    if player == @players[1]
-      @players[1].reduce_hp
-    elsif player == @players[2]
-      @players[1].reduce_hp
-    end
+  def attack
+    @players[1].reduce_hp
+    switch
+  end
+
+  def switch
+    @players.reverse!
   end
 
 end
+
+#
+# if player == @players[1]
+#   @players[1].reduce_hp
+# elsif player == @players[0]
+#   @players[0].reduce_hp
+# end

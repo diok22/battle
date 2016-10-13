@@ -20,7 +20,7 @@ describe Game do
       player_1 = Player.new("Dionysis")
       player_2 = Player.new("Royston")
       game = Game.new(player_1, player_2)
-      game.attack(player_2)
+      game.attack
       expect(player_2.hp).to eq(90)
     end
 
@@ -28,7 +28,7 @@ describe Game do
       player_1 = Player.new("Dionysis")
       player_2 = Player.new("Royston")
       game = Game.new(player_1, player_2)
-      expect{game.attack(player_2)}.to change{player_2.hp}.by(-10)
+      expect{game.attack}.to change{player_2.hp}.by(-10)
     end
   end
 end
