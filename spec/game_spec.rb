@@ -2,8 +2,6 @@ require 'game'
 
 describe Game do
 
-
-
   it "has a defualt damage of 10" do
     expect(Game::DEFAULT_DAMAGE).to eq(10)
   end
