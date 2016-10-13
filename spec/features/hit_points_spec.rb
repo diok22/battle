@@ -5,6 +5,6 @@ RSpec.feature Battle, :type => :feature do
 
     sign_in_and_play
 
-    expect(page).to have_text("Dio HP: 100")
+    expect(page).to have_text("Player2 HP: 100")
   end
 end
