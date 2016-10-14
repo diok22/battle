@@ -30,5 +30,6 @@ describe Game do
       game = Game.new(player_1, player_2)
       expect{game.attack}.to change{player_2.hp}.by(-10)
     end
+    
   end
 end
