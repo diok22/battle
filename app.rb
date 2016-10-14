@@ -23,7 +23,11 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     $game.attack
-    erb :attack_confirm
+    if $game.players[0].hp == 0 || $game.players[0].hp == 0
+      erb :end_game
+    else
+      erb :attack_confirm
+    end
   end
 
   run! if app_file == $0
