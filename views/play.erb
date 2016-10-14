@@ -1,8 +1,8 @@
 <h1> Welcome to Battle </h1>
-<h3> <%= $game.players[0].name %> vs <%= $game.players[1].name %> </h3>
+<h3> <%= $game.first_player_name %> vs <%= $game.second_player_name %> </h3>
 
-<h4> <%= $game.players[0].name %> HP: <%= $game.players[0].hp %> </h4>
-<h4> <%= $game.players[1].name %> HP: <%= $game.players[1].hp %> </h4>
+<h4> <%= $game.first_player_name %> HP: <%= $game.first_player_hp %> </h4>
+<h4> <%= $game.second_player_name %> HP: <%= $game.second_player_hp %> </h4>
 
 <form action="/attack" method="get">
 <input type="submit" value="Launch Attack!!">

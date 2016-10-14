@@ -19,4 +19,20 @@ class Game
     @players.reverse!
   end
 
+  def first_player_name
+    @players[0].name
+  end
+
+  def second_player_name
+    @players[1].name
+  end
+
+  def first_player_hp
+    @players[0].hp
+  end
+
+  def second_player_hp
+    @players[1].hp
+  end
+
 end
