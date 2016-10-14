@@ -30,6 +30,28 @@ describe Game do
       game = Game.new(player_1, player_2)
       expect{game.attack}.to change{player_2.hp}.by(-10)
     end
-    
+  end
+
+  context "stored player's attributes" do
+    player_1 = Player.new("Dionysis")
+    player_2 = Player.new("Royston")
+    game = Game.new(player_1, player_2)
+
+    it "holds the first player's name" do
+      expect(game.first_player_name).to eq "Dionysis"
+    end
+
+    it "holds the second player's name" do
+      expect(game.second_player_name).to eq "Royston"
+    end
+
+    it "holds the first player's hp" do
+      expect(game.first_player_hp).to eq 100
+    end
+
+    it "holds the second player's hp" do
+      expect(game.second_player_hp).to eq 100
+    end
+
   end
 end
